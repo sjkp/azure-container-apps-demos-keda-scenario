@@ -1,0 +1,3 @@
+[submodule "src/sample-dotnet-worker-servicebus-queue"]
+	path = src/sample-dotnet-worker-servicebus-queue
+	url = https://github.com/kedacore/sample-dotnet-worker-servicebus-queue
