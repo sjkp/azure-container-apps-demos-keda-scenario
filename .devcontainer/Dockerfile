@@ -1,5 +1,7 @@
 # You can pick any Debian/Ubuntu-based image. 😊
-FROM mcr.microsoft.com/vscode/devcontainers/base:bullseye
+#FROM mcr.microsoft.com/vscode/devcontainers/base:bullseye
+ARG VARIANT=6.0-bullseye
+FROM mcr.microsoft.com/vscode/devcontainers/dotnet:0-${VARIANT}
 
 # [Option] Install zsh
 ARG INSTALL_ZSH="true"

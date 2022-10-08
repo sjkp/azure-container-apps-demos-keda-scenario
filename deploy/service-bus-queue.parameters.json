@@ -9,13 +9,13 @@
             "value": "azure-container-apps-demos-keda-container-plan"
         },
         "ContainerApps.Portal.Name": {
-            "value": "aca-demos-keda-apps-portal"
+            "value": "sjkp-aca-demos-keda-apps-portal"
         },
         "ContainerApps.OrderProcessor.Name": {
             "value": "aca-demos-keda-apps-processor"
         },
         "ServiceBus.Namespace.Name": {
-            "value": "azure-container-apps-keda-scaling-demo"
+            "value": "sjkp-container-apps-keda-scaling-demo"
         }
     }
 }
