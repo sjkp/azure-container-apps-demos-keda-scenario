@@ -24,6 +24,24 @@ It will automatically create the Azure Service Bus namespaces with an orders que
 
 The official KEDA sample provides a message generator that sends messages to the queue, feel free to learn more about it on [GitHub](https://github.com/kedacore/sample-dotnet-worker-servicebus-queue/blob/main/connection-string-scenario.md#publishing-messages-to-the-queue).
 
+Update the src/Keda.Samples.Dotnet.OrderGenerator/Program.cs with the queue name and connection string.
+
+Try to add 500 messages to the queue and see the scaling out
+```
+dotnet run --project  src/Keda.Samples.Dotnet.OrderGenerator/Keda.Samples.Dotnet.OrderGenerator.csproj 
+``` 
+
+![Replica count](./media/replica-count.png)
+
+View log messages per container
+```
+ContainerAppConsoleLogs_CL  
+| where ContainerName_s == "queue-worker"
+| summarize count() by ContainerId_s
+```
+![Scale out](./media/scale-out.png)
+
+
 ## Delete the application
 
 Run the following command to delete the application:
